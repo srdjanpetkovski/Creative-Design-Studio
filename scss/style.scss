@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@300;400;700&display=swap");
+
+/********************
+variables
+********************/
+$fontFamily: "Lato", sans-serif;
+$fontHeadings: "Anton", sans-serif;
+$fontSize: 16px;
+$primary: #8f71bf;
+$secondary: #f3cc30;
+$white: #fff;
+$black: #000;
+$lightGray: #fdf9f6;
+$transition: 0.4s ease;
+$padding: 70px 0;
+
+/********************
+basic style
+********************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    line-height: 1.7;
+    background: $lightGray;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: $transition;
+    &:hover {
+        color: $lightGray;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $fontHeadings;
+}
+
+/********************
+mixins
+********************/
+@mixin flex($justify, $align, $direction: row) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+@mixin h2 {
+    font-size: 3rem;
+    color: $primary;
+    margin-bottom: 30px;
+    &::after {
+        content: "";
+        border: none;
+        height: 1px;
+        background: $primary;
+        display: block;
+        width: 20%;
+    }
+}
+
+/********************
+nav
+********************/
+nav {
+    background-color: $primary;
+    padding: 10px 0;
+    .container {
+        @include flex(space-between, center);
+        .logo {
+            font-size: 2rem;
+            letter-spacing: 2px;
+            font-weight: 400;
+            font-family: $fontHeadings;
+        }
+        ul {
+            @include flex(space-between, center);
+            li {
+                margin-left: 60px;
+                letter-spacing: 1px;
+                transition: $transition;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+/********************
+header
+********************/
+header {
+    background-image: url(../img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 75vh;
+    @include flex(flex-end, center, column);
+    position: relative;
+    div {
+        background: $primary;
+        display: inline-block;
+        width: 50%;
+        height: 195px;
+        position: absolute;
+        bottom: -19%;
+        hgroup {
+            text-align: center;
+            padding: 0 120px;
+            position: relative;
+            h1 {
+                font-size: 8rem;
+                color: $secondary;
+                position: absolute;
+                top: -110px;
+                left: 25%;
+                text-shadow: 0 0 10px $black;
+                letter-spacing: 1px;
+            }
+            h3 {
+                color: $white;
+                font-size: 2.7rem;
+                position: absolute;
+                top: 70px;
+                left: 280px;
+                font-weight: 700;
+                font-family: $fontFamily;
+            }
+            h5 {
+                color: $white;
+                font-size: 1.3rem;
+                position: absolute;
+                top: 140px;
+                left: 310px;
+                font-family: $fontFamily;
+            }
+        }
+    }
+}
