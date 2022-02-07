@@ -1,27 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Creative Design Studio</title>
-</head>
-<body>
+<?php include "partials/nav.php" ?>
 
-    <!-- nav -->
-    <nav>
-        <div class="container">
-            <a class="logo" href="index.php">Creative</a>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="team.php">Team</a></li>
-                <li><a href="projects.php">Projects</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- nav -->
+    <!-- header -->
     <header>
         <div>
             <hgroup>
@@ -32,6 +11,31 @@
         </div>
     </header>
 
+    <section class="services">
+        <article class="container">
+            <h2>Services</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Unde error, minima dolorem dignissimos magni temporibus vero rerum quos assumenda hic.</p>
+        </article>
+        <article class="container">
+            <div>
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, vita explicabo harum neque consectetur.</p>
+                <a href="#">learn more &rightarrow;</a>
+            </div>
+            <div>
+                <i class="fas fa-bullhorn"></i>
+                <h3>Internet marketing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, vita explicabo harum neque consectetur.</p>
+                <a href="#">learn more &rightarrow;</a>
+            </div>
+            <div>
+                <i class="fab fa-wordpress"></i>
+                <h3>Wordpress development</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, vita explicabo harum neque consectetur.</p>
+                <a href="#">learn more &rightarrow;</a>
+            </div>
+        </article>
+    </section>
 
-</body>
-</html>
+    <?php include "partials/footer.php" ?>
